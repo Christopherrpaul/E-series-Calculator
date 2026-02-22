@@ -17,9 +17,6 @@ SINGLE RECOMMENDED INSTALLATION METHOD
 
 4. Open the folder
 
-5. Run:
-       CreateDesktopIcon.ps1
-
 
 ------------------------------------------------------------
 CREATE A DESKTOP ICON (USING SCRIPT)
@@ -42,8 +39,8 @@ MOVING THE PROGRAM – FILE VS FOLDER
 ------------------------------------------------------------
 
 Although it is possible to move only the .exe file, this is NOT recommended. Instead, 
-   Move the entire folder. 
-   Delete the desktop shortcut.
+   	Move the entire folder. 
+   	Delete the desktop shortcut.
 	Repeat the procedure under CREATE A DESKTOP ICON (USING SCRIPT)
 
 
@@ -73,5 +70,6 @@ Note:
 AUTHOR
 
 Christopher Paul
+
 
 
