@@ -91,4 +91,5 @@ NOTES
 
 AUTHOR
 
-E-Series engineering
+Christopher Paul
+
