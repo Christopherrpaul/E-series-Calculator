@@ -1,95 +1,77 @@
-E-SERIES CALCULATOR (Win32)
+E-SERIES CALCULATOR – INSTALLATION GUIDE
 
-A lightweight Windows GUI application for finding the nearest standard E-series value (E3–E192).
+------------------------------------------------------------
+SINGLE RECOMMENDED INSTALLATION METHOD
+------------------------------------------------------------
 
----
+1. Download the project from GitHub:
+   - Click "Code" → "Download ZIP"
 
-FEATURES
+2. Extract the ZIP file:
+   - Right-click the ZIP → "Extract All"
 
-* Supports E3, E6, E12, E24, E48, E96, E192 series
-* Calculates nearest standard value
-* Displays percentage error
-* Supports engineering notation (e.g. 1e3, 4.7E2)
-* Native Win32 application (no dependencies)
+3. Move the entire extracted folder to a permanent location:
 
----
+   Recommended location:
+       C:\Users\<your name>\Documents\E-Series-Calculator
 
-QUICK START
+4. Open the folder
 
-1. Open this folder
+5. Run:
+       CreateDesktopIcon.ps1
 
-2. Run the program:
-   Double-click:
-   E-Series-Calculator.exe
 
----
-
-CREATE A DESKTOP ICON (RECOMMENDED)
-
-To create a proper desktop shortcut with the resistor icon:
+------------------------------------------------------------
+CREATE A DESKTOP ICON (USING SCRIPT)
+------------------------------------------------------------
 
 1. Right-click:
-   CreateDesktopIcon.ps1
+       CreateDesktopIcon.ps1
 
-2. Click:
-   Run with PowerShell
+2. Select:
+       Run with PowerShell
 
-This will create a desktop icon named:
-E-Series Calculator
+3. Allow it to run if prompted
 
-Double-click that icon to launch the program.
+4. A desktop icon will be created automatically
 
----
 
-IF WINDOWS BLOCKS THE SCRIPT
+ 
+------------------------------------------------------------
+MOVING THE PROGRAM – FILE VS FOLDER
+------------------------------------------------------------
 
-You may see a security warning.
+Although it is possible to move only the .exe file, this is NOT recommended. Instead, 
+   Move the entire folder. 
+   Delete the desktop shortcut.
+	Repeat the procedure under CREATE A DESKTOP ICON (USING SCRIPT)
 
-If so:
 
-1. Click "More info"
-2. Click "Run anyway"
+------------------------------------------------------------
+FILES NEEDED ONLY FOR RECOMPILING
+------------------------------------------------------------
 
-OR:
+These files are only needed if modifying the program:
 
-Open PowerShell and run:
+    E_Series.c
+    app.rc
+    resource.h
+    resistor_icon.ico
 
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+They are NOT required to run the application.
 
-Then run the script again.
+Note:
+    ".gitignore" has no functional purpose for running
+    or rebuilding the program. It is a leftover Git file
+    and may be deleted.
 
----
 
-FILES INCLUDED
 
-E-Series-Calculator.exe   - Main application
-resistor_icon.ico         - Icon used for shortcut
-CreateDesktopIcon.ps1     - Creates desktop shortcut
-src\                      - Source code
-
----
-
-BUILDING FROM SOURCE (OPTIONAL)
-
-Requires MinGW (GCC) and windres.
-
-Commands:
-
-windres app.rc app_res.o
-gcc E_Series.c app_res.o -o E-Series-Calculator.exe -lgdi32 -mwindows
-
----
-
-NOTES
-
-* No installation required
-* No external dependencies
-* Works on Windows 10/11
-* Fully portable
 
 ---
 
 AUTHOR
 
 Christopher Paul
+
 
